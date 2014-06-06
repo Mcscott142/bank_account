@@ -1,0 +1,17 @@
+<html>
+<h1>Accounts</h1>
+
+<p>
+  <% @accounts.each do |account| %>
+    <a href="#"><%= "====#{account.account_name}====" %></a><br>
+    <%= "Starting Balance: #{account.starting_balance}" %><br>
+    <%= "Ending Balance: #{account.current_balance}" %><br>
+      <% trans = account.summary %>
+      <% trans.each do |item| %>
+      <%= item %><br>
+      <% end %>
+
+  <% end %>
+
+
+</p>
